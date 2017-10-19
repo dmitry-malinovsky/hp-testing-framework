@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.dima.hptf:hptf-utils:unknown">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dima/hptf/hptf-utils/unknown/hptf-utils-unknown.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dima/hptf/hptf-utils/unknown/hptf-utils-unknown-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dima/hptf/hptf-utils/unknown/hptf-utils-unknown-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

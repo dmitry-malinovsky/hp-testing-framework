@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns="http://www.springframework.org/schema/beans"
+
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <context:annotation-config/>
+    <context:component-scan base-package="com.dima.hptf,ui"/>
+
+    <context:property-placeholder location="file:properties/ui.properties" ignore-unresolvable="true"/>
+
+    <context:property-placeholder location="file:properties/drivers.properties" ignore-unresolvable="true"/>
+
+    <bean id="systemPrerequits" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="targetObject" value="#{@systemProperties}"/>
+        <property name="targetMethod" value="putAll"/>
+        <property name="arguments">
+            <util:properties>
+                <prop key="webdriver.chrome.driver">${chrome}</prop>
+                <prop key="webdriver.ie.driver">${ie}</prop>
+                <prop key="phantomjs.binary.path">${headless}</prop>
+            </util:properties>
+        </property>
+    </bean>
+
+    <bean id="pageObjectsPackage" class="java.lang.String">
+        <constructor-arg value="com.dima.hptf,ui.pages"/>
+    </bean>
+
+    <bean id="pageScanner" class="com.dima.hptf,ui.factory.PageScanner"/>
+
+    <beans>
+        <bean id="baseUrl" class="java.lang.String">
+            <constructor-arg value="${local.baseUrl}"/>
+        </bean>
+    </beans>
+
+
+</beans>

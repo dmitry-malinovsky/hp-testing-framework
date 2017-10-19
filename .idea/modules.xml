@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/hp-testing-framework.iml" filepath="$PROJECT_DIR$/hp-testing-framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hptf-core/hptf-core.iml" filepath="$PROJECT_DIR$/hptf-core/hptf-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hptf-tests/hptf-tests.iml" filepath="$PROJECT_DIR$/hptf-tests/hptf-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hptf-ui/hptf-ui.iml" filepath="$PROJECT_DIR$/hptf-ui/hptf-ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hptf-utils/hptf-utils.iml" filepath="$PROJECT_DIR$/hptf-utils/hptf-utils.iml" />
+    </modules>
+  </component>
+</project>
